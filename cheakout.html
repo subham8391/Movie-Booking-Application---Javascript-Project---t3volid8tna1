@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Booking</title>
+  <style>
+    /* Add your preferred styles here */
+  </style>
+</head>
+<body>
+  
+  <h1>Movie Booking</h1>
+
+  <section id="movieSelection">
+    <h2>Movie Selection</h2>
+    <!-- Add your movie selection options here -->
+    <button onclick="redirectToCheckout()">Book Tickets</button>
+  </section>
+
+  <section id="checkout" style="display: none;">
+    <h2>Checkout Page</h2>
+
+    <section id="summary">
+      <h3>Summary</h3>
+      <p>
+        <label for="movie">Movie:</label>
+        <span id="movie"></span>
+      </p>
+      <p>
+        <label for="ticketPrice">Ticket Price:</label>
+        $<span id="ticketPrice"></span>
+      </p>
+      <p>
+        <label for="numTickets">Number of Tickets:</label>
+        <input type="number" id="numTickets" min="1" value="1" onchange="updateSummary()" />
+      </p>
+      <p>
+        <label for="convenienceFee">Convenience Fee:</label>
+        $<span id="convenienceFee"></span>
+      </p>
+      <p>
+        <label for="subtotal">Subtotal:</label>
+        $<span id="subtotal"></span>
+      </p>
+    </section>
+
+    <section id="payment">
+      <h3>Payment</h3>
+      <form>
+        <p>
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" />
+        </p>
+        <p>
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" />
+        </p>
+        <p>
+          <label for="email">Email:</label>
+          <input type="email" id="email" />
+        </p>
+        <p>
+          <label for="paymentMethod">Payment Method:</label>
+          <select id="paymentMethod">
+            <option value="creditCard">Credit Card</option>
+            <option value="debitCard">Debit Card</option>
+            <option value="paypal">PayPal</option>
+            <!-- Add more options if needed -->
+          </select>
+        </p>
+        <p>
+          <button type="submit" onclick="submitForm()">Submit</button>
+        </p>
+      </form>
+    </section>
+
+  <script src="App.js">
+    // // Constants for ticket price and convenience fee
+    // const ticketPrice = 10; // Set your ticket price here
+    // const convenienceFeePercentage = 1.75; // Set convenience fee percentage here
+
+    // // Function to update the summary section based on user input
+    // function updateSummary() {
+    //   const numTickets = parseInt(document.getElementById("numTickets").value);
+    //   const convenienceFee = (numTickets * ticketPrice * convenienceFeePercentage) / 100;
+    //   const subtotal = numTickets * ticketPrice + convenienceFee;
+
+    //   document.getElementById("convenienceFee").textContent = convenienceFee.toFixed(2);
+    //   document.getElementById("subtotal").textContent = subtotal.toFixed(2);
+    // }
+
+    // // Function to submit the form (placeholder function)
+    // function submitForm() {
+    //   // Add your form submission logic here
+    //   alert("Form submitted successfully!");
+    // }
+
+    // // Function to redirect to the checkout page
+    // function redirectToCheckout() {
+    //   document.getElementById("movie").textContent = "Movie Title"; // Set the movie title dynamically
+    //   document.getElementById("ticketPrice").textContent = ticketPrice.toFixed(2);
+    //   updateSummary();
+    //   document.getElementById("movieSelection").style.display = "none";
+    //   document.getElementById("checkout").style.display = "block";
+    // }
+  </script>
+</body>
+</html>

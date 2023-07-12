@@ -1,1 +1,225 @@
 
+*{
+  margin: 0;
+  padding: 0;
+
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2 {
+    margin: 0;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+  }
+  
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  .s-bar{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fff;
+  }
+  .fa-search{
+    color: black;
+  }
+  #searchInput {
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  
+  /* Main Content Styles */
+  main {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+  
+  #genreList {
+    margin-bottom: 20px;
+  }
+  
+  #genreButtons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  #genreButtons li {
+    margin-right: 10px;
+    display: block;
+    
+  }
+  
+  #movieList {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .movie-card {
+    width: 200px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Movie Modal Styles */
+  /* .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 20% auto;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 5px;
+  } */
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* #bookTicketsBtn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  } */
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    max-width: 600px;
+  }
+  .pop-m-detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .m-img{
+    height: auto;
+    width: 100%;
+  }
+  .modal-content h2 {
+    margin-top: 0;
+  }
+
+  .modal-content img {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    margin-bottom: 10px;
+  }
+  
+  .modal-content p {
+    margin-bottom: 10px;
+  }
+  
+  .modal-content .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .modal-content .close:hover,
+  .modal-content .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #bookTicketsBtn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #bookTicketsBtn:hover {
+    background-color: #45a049;
+  }
+  
+  footer{
+    padding: 20px;
+    background-color: #333;
+    text-align: center;
+
+  }
+  footer h2{
+    font-size: 15px;
+    color: aliceblue;
+    text-transform: capitalize;
+  }

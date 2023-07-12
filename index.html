@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Booking App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#" class="logo">Movie Booking App</a>
+      <div class="s-bar">
+      <i class="fa fa-search"></i>
+      <input type="text" id="searchInput" placeholder="Search movies...">
+    </div>
+    </nav>
+  </header>
 
+  <main>
+    <section id="genreList">
+      <h2>Genres</h2>
+      <ul id="genreButtons">
+        <!-- Genre buttons will be dynamically added here -->
+      </ul>
+    </section>
+
+    <section id="movieList">
+      <!-- Movie cards will be dynamically added here -->
+    </section>
+    
+  </main>
+  <footer><h2> @copy right by Subham </h2></footer>
+
+  <div id="movieModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <div class="pop-m-detail">
+        <div class="m-img">
+          <img id="modalImage" src="" alt="">
+        </div>
+        <div class="m-detail">
+          <p id="modalRating"></p>
+          <p id="modalLanguage"></p>
+          <p id="modalDuration"></p>
+          <p id="modalGenre"></p>
+          <p id="modalOverview"></p>
+          <p id="modalPrice"></p>
+          <button id="bookTicketsBtn">Book Tickets</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="App.js"></script>
+</body>
+</html>

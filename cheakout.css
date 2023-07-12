@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+#checkoutPage {
+  /* display: none; */
+}
+
+#summarySection {
+  margin-bottom: 20px;
+}
+
+#paymentForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#paymentForm input,
+#paymentForm select {
+  margin-bottom: 10px;
+}
+
+#paymentForm button {
+  padding: 10px 20px;
+  background-color: #4285F4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#paymentForm button:hover {
+  background-color: #3367D6;
+}
+
+#paymentForm button[type="submit"] {
+  margin-top: 20px;
+}
+
+#paymentForm button[type="submit"]:hover {
+  background-color: #1A5CAB;
+}
