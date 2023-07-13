@@ -145,6 +145,10 @@ function showMovieDescription(movie) {
   // Set up event listener for the "Book Tickets" button
   bookTicketsBtn.addEventListener('click', () => {
     // Redirect the user to the checkout page or perform any desired action
+    const disname=document.querySelector('#modalTitle');
+    const disappi=document.querySelector('.pop-m-detail');
+    disappi.style.display = 'none';
+    disname.style.display='none';
     showMovieDescription(movie);
     redirectToCheckout(movie.title);
     // console.log('Book Tickets clicked');
@@ -158,6 +162,7 @@ function showMovieDescription(movie) {
   closeBtn.addEventListener('click', () => {
     // Hide the modal when the close button is clicked
     modal.style.display = 'none';
+    // window.location.reload();
   });
 
   // Close the modal when the user clicks outside of it
@@ -181,7 +186,7 @@ function debounce(func, delay) {
     clearTimeout(timer);
     timer = setTimeout(() => {
       func.apply(context, args);
-    }, delay);
+    }, 200);
   };
 }
 
@@ -233,7 +238,30 @@ const price = Math.floor(Math.random() * (300 - 250 + 1) + 250);
  // Function to submit the form (placeholder function)
  function submitForm() {
    // Add your form submission logic here
-   alert("Form submitted successfully!");
+    const fn=document.getElementById('firstName').value;
+    const ln=document.getElementById('lastName').value;
+    const em=document.getElementById('email').value;
+    const sl=document.getElementById('paymentMethod').value;
+    if(fn==' '){
+      alert("First Name Should Be Field");
+      return false;
+    }
+    else if(ln == ''){
+      alert("Last Name Should Be field");
+      return false;
+    }
+    else if(em==''){
+      alert("Email Should Be field");
+      return false;
+    }
+    else if(sl==''){
+      alert("Select any payment Method");
+      return false;
+    }
+    else{
+      alert("Movie Booking successfully!");
+    }
+   
  }
 
  // Function to redirect to the checkout page
@@ -245,7 +273,3 @@ const price = Math.floor(Math.random() * (300 - 250 + 1) + 250);
    document.getElementById("checkout").style.display = "block";
  }
 
-//  movieCard.addEventListener('click', () => {
-//   showMovieDescription(movie);
-//   redirectToCheckout(movie.title);
-// });

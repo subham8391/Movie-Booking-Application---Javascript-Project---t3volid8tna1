@@ -2,6 +2,7 @@
 *{
   margin: 0;
   padding: 0;
+ 
 
 }
 /* General Styles */
@@ -223,4 +224,54 @@ body {
     font-size: 15px;
     color: aliceblue;
     text-transform: capitalize;
+  }
+  #movieSelection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .co-hadding{
+    text-align: center;
+    padding: 10px;
+   
+  }
+  .pert-chout{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #summary{
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+  }
+  #payment{
+    
+    display: flex;
+    flex-direction: column;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  input[type='text'],input[type='number'],input[type='email']{
+    padding: 5px 15px;
+    border-radius: 10px;
+
+    
+  }
+  #paymentMethod{
+    padding: 5px 0px;
+    border-radius: 10px;
+  }
+  #co-btn{
+    padding:5px 6px;
+  }
+  #gb-btn{
+    padding:5px 6px;
   }

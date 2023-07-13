@@ -46,76 +46,98 @@
           <p id="modalGenre"></p>
           <p id="modalOverview"></p>
           <p id="modalPrice"></p>
-          
-
-
-          <section id="movieSelection">
-            <button id="bookTicketsBtn" onclick="redirectToCheckout()">Book Tickets</button>
-            <!-- Add your movie selection options here -->
-            
-          </section>
-        
-          <section id="checkout" style="display: none;">
-            <h2>Checkout Page</h2>
-        
-            <section id="summary">
-              <h3>Summary</h3>
-              <p>
-                <label for="movie">Movie:</label>
-                <span id="movie"></span>
-              </p>
-              <p>
-                <label for="ticketPrice">Ticket Price:</label>
-                $<span id="ticketPrice"></span>
-              </p>
-              <p>
-                <label for="numTickets">Number of Tickets:</label>
-                <input type="number" id="numTickets" min="1" value="1" onchange="updateSummary()" />
-              </p>
-              <p>
-                <label for="convenienceFee">Convenience Fee:</label>
-                $<span id="convenienceFee"></span>
-              </p>
-              <p>
-                <label for="subtotal">Subtotal:</label>
-                $<span id="subtotal"></span>
-              </p>
-            </section>
-        
-            <section id="payment">
-              <h3>Payment</h3>
-              <form>
-                <p>
-                  <label for="firstName">First Name:</label>
-                  <input type="text" id="firstName" />
-                </p>
-                <p>
-                  <label for="lastName">Last Name:</label>
-                  <input type="text" id="lastName" />
-                </p>
-                <p>
-                  <label for="email">Email:</label>
-                  <input type="email" id="email" />
-                </p>
-                <p>
-                  <label for="paymentMethod">Payment Method:</label>
-                  <select id="paymentMethod">
-                    <option value="creditCard">Credit Card</option>
-                    <option value="debitCard">Debit Card</option>
-                    <option value="paypal">PayPal</option>
-                    <!-- Add more options if needed -->
-                  </select>
-                </p>
-                <p>
-                  <button type="submit" onclick="submitForm()">Submit</button>
-                </p>
-              </form>
-            </section>
-        
-
-
         </div>
       </div>
+      <!-- bookTicketsBtn -->
+      <section id="movieSelection">
+        <button id="bookTicketsBtn" onclick="redirectToCheckout()">Book Tickets</button>
+      </section>
+    <!-- Checkout section -->
+      <section id="checkout" style="display: none;">
+          <h2 class="co-hadding">Checkout Your Ticket</h2>
+        <section class="pert-chout">
+          <section id="summary">
+            <h3>Summary</h3>
+            <div>
+              <label for="movie">Movie:</label>
+              <span id="movie"></span>
+            </div>
+            <div>
+              
+              <label for="ticketPrice">Ticket Price:</label>
+              $<span id="ticketPrice"></span>
+            
+            </div>
+            <div>
+              <div>
+              <label for="numTickets">Number of Tickets:</label>
+            </div>
+            <div>
+              <input type="number" id="numTickets" min="1" value="1" onchange="updateSummary()" />
+            </div>
+            </div>
+            <div>
+              
+              <label for="convenienceFee">Convenience Fee:</label>
+              $<span id="convenienceFee"></span>
+    
+            </div>
+            <div>
+              <label for="subtotal">Subtotal:</label>
+              $<span id="subtotal"></span>
+            </div>
+          </section>
+      
+          <section id="payment">
+            <h3>Payment</h3>
+            <form>
+              <div>
+                <div>
+                <label for="firstName">First Name:</label>
+              </div>
+              <div>
+                <input type="text" id="firstName" placeholder="Enter your FirstName..." />
+              </div>
+              </div>
+              <div>
+                <div>
+                <label for="lastName">Last Name:</label>
+              </div>
+              <div>
+                <input type="text" id="lastName" placeholder="Enter Your LastName..." />
+              </div>
+              </div>
+              <div>
+                <div>
+                <label for="email">Email:</label>
+              </div>
+              <div>
+                <input type="email" id="email" placeholder="Enter Your Email..." />
+              </div>
+              </div>
+              <div>
+                <div>
+                <label for="paymentMethod">Payment Method:</label>
+              </div>
+              <div>
+                <select id="paymentMethod">
+                  <option value="chose card">Select One Payment Option..</option>
+                  <option value="creditCard">Credit Card</option>
+                  <option value="debitCard">Debit Card</option>
+                  <option value="paypal">PayPal</option>
+                  <!-- Add more options if needed -->
+                </select>
+              </div>
+              </div>
+              <div>
+                <button id="co-btn" type="submit" onclick="submitForm()">Submit</button>
+                <a href="index.html"><button id="gb-btn">Go Back</button></a>
+
+              </div>
+            </form>
+          </section>
+        </section>
+        </section>
     </div>
   </div>
 
