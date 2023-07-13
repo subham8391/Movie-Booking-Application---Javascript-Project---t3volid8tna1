@@ -112,6 +112,7 @@ function filterMoviesByGenre(genreId) {
   })
   displayMovies(filterMovieList);
 }
+//calculate prise
 
 //show the pop up movie booking option
 
@@ -135,15 +136,19 @@ function showMovieDescription(movie) {
   modalOverview.textContent = `Overview: ${movie.overview}`;
 
   // Generate a random price between 250-300
-  const price = Math.floor(Math.random() * (300 - 250 + 1) + 250);
-  modalPrice.textContent = `Price: $${price}`;
+  function calprice(){
+    const price = Math.floor(Math.random() * (300 - 250 + 1) + 250);
+    modalPrice.textContent = `Price: $${price}`;
+  }
+  calprice();
 
   // Set up event listener for the "Book Tickets" button
-  // bookTicketsBtn.addEventListener('click', () => {
-  //   // Redirect the user to the checkout page or perform any desired action
-  //   window.location.href = "checkout.html";
-  //   console.log('Book Tickets clicked');
-  // });
+  bookTicketsBtn.addEventListener('click', () => {
+    // Redirect the user to the checkout page or perform any desired action
+    showMovieDescription(movie);
+    redirectToCheckout(movie.title);
+    // console.log('Book Tickets clicked');
+  });
 
   // Show the modal
   modal.style.display = 'block';
@@ -210,9 +215,9 @@ function initializeApp() {
 // Call the initializeApp function when the page loads
 window.addEventListener('load', initializeApp);
 
-
+const price = Math.floor(Math.random() * (300 - 250 + 1) + 250);
  // Constants for ticket price and convenience fee
- const ticketPrice = 250; // Set your ticket price here
+ const ticketPrice = price; // Set your ticket price here
  const convenienceFeePercentage = 1.75; // Set convenience fee percentage here
 
  // Function to update the summary section based on user input
@@ -232,10 +237,15 @@ window.addEventListener('load', initializeApp);
  }
 
  // Function to redirect to the checkout page
- function redirectToCheckout() {
-   document.getElementById("movie").textContent = "Movie Title"; // Set the movie title dynamically
+ function redirectToCheckout(movietitle) {
+   document.getElementById("movie").textContent = movietitle; // Set the movie title dynamically
    document.getElementById("ticketPrice").textContent = ticketPrice.toFixed(2);
    updateSummary();
    document.getElementById("movieSelection").style.display = "none";
    document.getElementById("checkout").style.display = "block";
  }
+
+//  movieCard.addEventListener('click', () => {
+//   showMovieDescription(movie);
+//   redirectToCheckout(movie.title);
+// });
